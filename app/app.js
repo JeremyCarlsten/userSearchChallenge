@@ -5,6 +5,6 @@
 
 
   function UserSearchController() {
-
+      
   }
 })();
