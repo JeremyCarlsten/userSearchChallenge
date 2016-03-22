@@ -5,16 +5,41 @@
     <script src="assets/bower_components/angular-animate/angular-animate.js"></script>
     <script src="assets/bower_components/underscore/underscore.js"></script>
     <script src="app.js"></script>
-
+    <!-- <link rel="stylesheet" href="assets/styles/reset.css"/> -->
     <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css"/>
-    <link rel="stylesheet" href="assets/styles/reset.css"/>
     <link rel="stylesheet" href="assets/styles/main.css"/>
 </head>
 <body>
 <main class="clearfix">
-    <header class="form-header clearfix">
+    <header class="form-header ">
         <h1 class="header">UX Society Members</h1>
     </header>
+    <section class="row">
+      <div class="searchBar col-xs-12">
+        <input class="form-control search-bar" type="text" placeholder="Search..."/></span>
+      </div>
+    </section>
+    <section class="row top-margin">
+      <div class="table-responsive col-xs-10">
+        <table class="table table-hover">
+          <thead>
+            <th>Name</th>
+            <th>Occupation</th>
+            <th>Company</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PJones</td>
+              <td>Developer</td>
+              <td>Awesome Inc.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="well well-sm col-xs-2 top-margin">
+        Some stuff
+      </div>
+  </section>
 </main>
 </body>
 </html>
