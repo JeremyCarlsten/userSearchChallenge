@@ -62,13 +62,13 @@ module.exports = function(grunt) {
         src: 'app/app.js',
         options: {
           vendor: [
-            'node_modules/angular/angular.min.js',
-            'node_modules/angular-mocks/angular-mocks.js',
-            'node_modules/bardjs/dist/bard.min.js',
-            'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/angular-animate/angular-animate.min.js',
-            'node_modules/bootstrap/dist/js/bootstrap.min.js',
-            'node_modules/underscore/underscore-min.js'
+            'app/assets/bower_components/angular/angular.min.js',
+            'app/assets/bower_components/angular-mocks/angular-mocks.js',
+            'app/assets/bower_components/bardjs/dist/bard.min.js',
+            'app/assets/bower_components/jquery/dist/jquery.min.js',
+            'app/assets/bower_components/angular-animate/angular-animate.min.js',
+            'app/assets/bower_components/bootstrap/dist/js/bootstrap.min.js',
+            'app/assets/bower_components/underscore/underscore-min.js'
           ],
           keepRunner: true,
           specs: 'test/functional/*Spec.js'
