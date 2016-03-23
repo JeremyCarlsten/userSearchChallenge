@@ -1,10 +1,15 @@
 (function() {
   'use strict';
-  angular.module('UserSearch', [])
-    .controller('UserSearchController', UserSearchController);
+  
+  angular.module('UserSearch')
+    .controller('UserSearchController', ['searchService', UserSearchController]);
 
 
-  function UserSearchController() {
-      
+  function UserSearchController(searchService) {
+      var self = this;
+
+        console.log('it begins');
+
+      var userData = searchService.getAllUserData();
   }
 })();

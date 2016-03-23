@@ -59,19 +59,20 @@ module.exports = function(grunt) {
     },
     jasmine: {
       all: {
-        src: 'app/app.js',
+        src: ['app/components/**/*.js','app/app.js'],
         options: {
           vendor: [
             'app/assets/bower_components/angular/angular.min.js',
             'app/assets/bower_components/angular-mocks/angular-mocks.js',
-            'app/assets/bower_components/bardjs/dist/bard.min.js',
+            'app/assets/bower_components/sinon/index.js',
+            'app/assets/bower_components/bardjs/dist/bard.js',
             'app/assets/bower_components/jquery/dist/jquery.min.js',
             'app/assets/bower_components/angular-animate/angular-animate.min.js',
             'app/assets/bower_components/bootstrap/dist/js/bootstrap.min.js',
             'app/assets/bower_components/underscore/underscore-min.js'
           ],
           keepRunner: true,
-          specs: 'test/functional/*Spec.js'
+          specs: 'test/**/*Spec.js'
         }
       }
     }
