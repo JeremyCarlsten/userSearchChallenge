@@ -29,10 +29,11 @@
             <th>Company</th>
           </thead>
           <tbody>
-            <tr>
-              <td>PJones</td>
-              <td>Developer</td>
-              <td>Awesome Inc.</td>
+
+            <tr ng-repeat="user in searchCtrl.userData">
+                <td>{{user.firstName}} {{user.surname}}</td>
+              <td>{{user.occupation}}</td>
+              <td>{{user.company}}</td>
             </tr>
           </tbody>
         </table>
