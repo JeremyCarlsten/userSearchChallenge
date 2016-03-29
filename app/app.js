@@ -8,9 +8,10 @@
   function UserSearchController(searchService) {
       var self = this;
       self.user = {};
-      activate();
+      self.searchFilter = '';
+      init();
 
-      function activate() {
+      function init() {
           return searchService.getAllUserData().then(function(data){
                   self.userData = data;
                 });
@@ -21,6 +22,6 @@
         if(self.userData[index]){
           self.user = self.userData[index];
         }
-      }
+      };
   }
 })();
