@@ -16,3 +16,8 @@ main{
 .top-margin {
   margin-top: 8px;
 }
+
+
+.fancy {
+  font-style: italic;
+}

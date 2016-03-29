@@ -21,7 +21,7 @@
       </div>
     </section>
     <section class="row top-margin">
-      <div class="table-responsive col-xs-10">
+      <div class="table-responsive col-xs-9">
         <table class="table table-hover">
           <thead>
             <th>Name</th>
@@ -30,7 +30,7 @@
           </thead>
           <tbody>
 
-            <tr ng-repeat="user in searchCtrl.userData">
+            <tr ng-repeat="user in searchCtrl.userData" ng-click="searchCtrl.getUserDetails($index)">
                 <td>{{user.firstName}} {{user.surname}}</td>
               <td>{{user.occupation}}</td>
               <td>{{user.company}}</td>
@@ -38,8 +38,12 @@
           </tbody>
         </table>
       </div>
-      <div class="well well-sm col-xs-2 top-margin">
-        Some stuff
+      <div class="well well-sm col-xs-3 top-margin">
+        <h4>{{searchCtrl.user.firstName}} {{searchCtrl.user.middleInitial}} {{searchCtrl.user.surname}}</h4>
+        <img src="{{searchCtrl.user.portrait}}" alt="No portrait for that user" />
+        <p>{{searchCtrl.user.occupation}}<p>
+        <p>{{searchCtrl.user.company}}<p>
+        <p class='fancy'>{{searchCtrl.user.motto}}<p>
       </div>
   </section>
 </main>
