@@ -4,9 +4,12 @@
     <script src="assets/bower_components/angular/angular.min.js"></script>
     <script src="assets/bower_components/angular-animate/angular-animate.js"></script>
     <script src="assets/bower_components/underscore/underscore.js"></script>
+    <script type="text/javascript" src="http://fgnass.github.io/spin.js/spin.min.js"></script>
+    <script src="assets/bower_components/spin.js/spin.min.js"></script>
+    <script src="assets/bower_components/angular-spinner/angular-spinner.min.js"></script>
     <script src="components/searchPage/search-service.js"></script>
     <script src="app.js"></script>
-    <!-- <link rel="stylesheet" href="assets/styles/reset.css"/> -->
+
     <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="assets/styles/main.css"/>
 </head>
@@ -20,7 +23,8 @@
         <input class="form-control search-bar" type="text" placeholder="Search..." ng-model="searchCtrl.searchFilter"/></span>
       </div>
     </section>
-    <section class="row top-margin">
+    <div class='row top-margin min-height' us-spinner spinner-on="searchCtrl.showSpinner"></span>
+    <section ng-show="!searchCtrl.showSpinner" class="row top-margin">
       <div class="table-responsive col-xs-9">
         <table class="table table-hover">
           <thead>

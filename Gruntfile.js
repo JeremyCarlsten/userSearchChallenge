@@ -69,6 +69,9 @@ module.exports = function(grunt) {
             'app/assets/bower_components/jquery/dist/jquery.min.js',
             'app/assets/bower_components/angular-animate/angular-animate.min.js',
             'app/assets/bower_components/bootstrap/dist/js/bootstrap.min.js',
+            'app/assets/bower_components/angular-spinner/angular-spinner.min.js',
+            'app/assets/bower_components/spin.js/spin.min.js',
+            'app/assets/bower_components/bootstrap/dist/js/bootstrap.min.js',
             'app/assets/bower_components/underscore/underscore-min.js'
           ],
           keepRunner: true,

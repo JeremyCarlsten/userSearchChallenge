@@ -24,6 +24,7 @@ describe('UserSearchControllerTest', function() {
         expect(searchCtrl.userData).toEqual(dataList);
         expect(searchCtrl.searchFilter).toEqual('');
         expect(searchCtrl.user).toEqual(firstPerson);
+        expect(searchCtrl.showSpinner).toEqual(false);
     });
 
     it('should handle no data from server', function () {

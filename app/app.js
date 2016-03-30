@@ -9,12 +9,14 @@
       var self = this;
       self.user = {};
       self.searchFilter = '';
+      self.showSpinner = true;
       init();
 
       function init() {
           return searchService.getAllUserData().then(function(data){
                   self.userData = data;
                   self.getUserDetails(0);
+                  self.showSpinner = false;
                 });
       }
 

@@ -14,7 +14,7 @@
     };
   };
 
-  angular.module('UserSearch', [])
+  angular.module('UserSearch', ['angularSpinner'])
     .service('searchService', ['$http', '$q', searchService]);
 })();
 

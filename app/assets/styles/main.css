@@ -17,6 +17,9 @@ main{
   margin-top: 8px;
 }
 
+.min-height {
+  min-height: 50px;
+}
 
 .fancy {
   font-style: italic;
