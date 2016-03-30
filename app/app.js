@@ -14,11 +14,11 @@
       function init() {
           return searchService.getAllUserData().then(function(data){
                   self.userData = data;
+                  self.getUserDetails(0);
                 });
       }
 
       self.getUserDetails = function(index){
-        console.log(self.userData[index]);
         if(self.userData[index]){
           self.user = self.userData[index];
         }
