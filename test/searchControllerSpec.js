@@ -26,6 +26,18 @@ describe('UserSearchControllerTest', function() {
         expect(searchCtrl.user).toEqual(firstPerson);
     });
 
+    it('should handle no data from server', function () {
+        var dataList = [];
+        deferred.resolve(dataList)
+
+        $rootScope.$apply();
+
+        expect(searchService.getAllUserData).toHaveBeenCalled();
+        expect(searchCtrl.userData).toEqual(dataList);
+        expect(searchCtrl.searchFilter).toEqual('');
+        expect(searchCtrl.user).toEqual({});
+    });
+
     it('getUserDetails should setup current details based on index', function () {
         var firstPerson = {firstname: 'Bob', occupation: 'Dev', company: 'Awesome Inc.'};
         var secondPerson = {firstname: 'James', occupation: 'BA', company: 'Not Awesome Inc.'};
