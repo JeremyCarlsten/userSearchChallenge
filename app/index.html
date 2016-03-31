@@ -13,42 +13,49 @@
     <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="assets/styles/main.css"/>
 </head>
-<body ng-controller="UserSearchController as searchCtrl">
-<main class="clearfix">
-    <header class="form-header ">
-        <h1 class="header">UX Society Members</h1>
+<body ng-controller="UserSearchController as searchCtrl" class="container-fluid">
+<main class="main col-xs-7 col-xs-offset-2">
+    <header class="form-header row">
+        <h1 class="header col-xs-12">UX Society Members</h1>
+        <div class="searchBar col-xs-12">
+            <input class="form-control search-bar" type="text" placeholder="Search..."
+                   ng-model="searchCtrl.searchFilter"/></span>
+        </div>
     </header>
-    <section class="row">
-      <div class="searchBar col-xs-12">
-        <input class="form-control search-bar" type="text" placeholder="Search..." ng-model="searchCtrl.searchFilter"/></span>
-      </div>
-    </section>
-    <div class='row top-margin min-height' us-spinner spinner-on="searchCtrl.showSpinner"></span>
-    <section ng-show="!searchCtrl.showSpinner" class="row top-margin">
-      <div class="table-responsive col-xs-9">
-        <table class="table table-hover">
-          <thead>
-            <th>Name</th>
-            <th>Occupation</th>
-            <th>Company</th>
-          </thead>
-          <tbody>
-            <tr ng-repeat="user in searchCtrl.userData | filter: searchCtrl.searchFilter" ng-click="searchCtrl.getUserDetails($index)">
-                <td>{{user.firstName}} {{user.surname}}</td>
-              <td>{{user.occupation}}</td>
-              <td>{{user.company}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="well well-sm col-xs-3 top-margin">
-        <h4>{{searchCtrl.user.firstName}} {{searchCtrl.user.middleInitial}} {{searchCtrl.user.surname}}</h4>
-        <img src="{{searchCtrl.user.portrait}}" alt="No portrait for that user" />
-        <p>{{searchCtrl.user.occupation}}<p>
-        <p>{{searchCtrl.user.company}}<p>
-        <p class='fancy'>{{searchCtrl.user.motto}}<p>
-      </div>
-  </section>
+    <div class='row spinner' ng-if="searchCtrl.showSpinner" us-spinner></div>
+    <div class="col-xs-12">
+        <section ng-hide="searchCtrl.showSpinner" class="row top-margin">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                    <th>Name</th>
+                    <th>Occupation</th>
+                    <th>Company</th>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="user in searchCtrl.userData | filter: searchCtrl.searchFilter"
+                        ng-click="searchCtrl.getUserDetails($index)">
+                        <td>{{user.firstName}} {{user.surname}}</td>
+                        <td>{{user.occupation}}</td>
+                        <td>{{user.company}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
 </main>
+<aside class="col-xs-3" ng-hide="searchCtrl.showSpinner">
+    <div class="well well-sm top-margin fixed col-xs-3 ">
+        <h4>{{searchCtrl.user.firstName}} {{searchCtrl.user.middleInitial}} {{searchCtrl.user.surname}}</h4>
+        <img src="{{searchCtrl.user.portrait}}" alt="No portrait for that user"/>
+        <p>{{searchCtrl.user.occupation}}
+        <p>
+        <p>{{searchCtrl.user.company}}
+        <p>
+        <p class='fancy'>{{searchCtrl.user.motto}}
+        <p>
+    </div>
+</aside>
 </body>
 </html>

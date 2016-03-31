@@ -1,26 +1,39 @@
-html, body{
+html, body {
     background: #eaeaea;
     font-size: 16px;
     font-family: sans-serif;
 }
 
-main{
+.main {
     background: #fff;
+    border: 1px solid #e1e1e1;
     border-radius: 10px;
-    margin: 20px auto;
+    margin-top: 10px;
     padding: 30px;
-    width: 75%;
+    position: relative;
+    z-index: 5;
 }
 
+.fixed {
+    position: fixed;
+}
 
 .top-margin {
-  margin-top: 8px;
+    margin-top: 8px;
 }
 
-.min-height {
-  min-height: 50px;
+.spinner {
+    margin-top: 50px;
 }
 
 .fancy {
-  font-style: italic;
+    font-style: italic;
+}
+
+aside {
+    margin-left: -20px;
+    margin-top: 50px;
+    padding-left: 15px;
+    position: relative;
+    z-index: 1;
 }
