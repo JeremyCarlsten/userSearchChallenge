@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/styles/main.css"/>
 </head>
 <body ng-controller="UserSearchController as searchCtrl" class="container-fluid">
+<div  class="alert alert-danger top-margin" ng-if="searchCtrl.error">{{searchCtrl.error}}</div>
 <main class="main col-xs-7 col-xs-offset-2">
     <header class="form-header row">
         <h1 class="header col-xs-12">UX Society Members</h1>

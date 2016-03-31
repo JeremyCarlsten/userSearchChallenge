@@ -14,10 +14,15 @@
         init();
 
         function init() {
-            return searchService.getAllUserData().then(function (data) {
-                self.userData = data;
-                self.getUserDetails(0);
-                self.showSpinner = false;
+            return searchService.getAllUserData().then(function (response) {
+                if (response.data !== null) {
+                    self.userData = response;
+                    self.getUserDetails(0);
+                    self.showSpinner = false;
+                } else {
+                    self.error = "Oops. Looks like we hit a snag, try reloading.";
+                    self.showSpinner = false;
+                }
             });
         }
 

@@ -1,4 +1,3 @@
-'use strict';
 module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
@@ -43,12 +42,17 @@ module.exports = function (grunt) {
         },
         jshint: {
             options: {
-                jshintrc: '.jshintrc'
+                globals:{
+                    Angular: true,
+                    Jasmine: true,
+                    Grunt:true
+                }
             },
             all: [
                 'Gruntfile.js',
                 'app/components/**/*.js',
-                'app/app.js'
+                'app/app.js',
+                'test/**/*.js'
             ]
         },
         uglify: {

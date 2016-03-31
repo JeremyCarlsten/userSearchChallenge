@@ -8,6 +8,8 @@
             var deferred = $q.defer();
             $http.get('http://private-a73e-aquentuxsociety.apiary-mock.com/members').then(function (result) {
                 deferred.resolve(result.data);
+            }, function(err){
+                deferred.resolve(err);
             });
 
             return deferred.promise;
