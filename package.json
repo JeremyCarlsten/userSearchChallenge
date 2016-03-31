@@ -6,6 +6,9 @@
     "email": "",
     "url": "https://github.com/JeremyCarlsten"
   },
+  "scripts": {
+    "start": "grunt serve"
+  },
   "licenses": [
     {
       "type": "MIT"
